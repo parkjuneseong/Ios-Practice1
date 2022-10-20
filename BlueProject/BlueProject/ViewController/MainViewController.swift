@@ -49,7 +49,7 @@ class MainViewController: UIViewController {
         
         print("viewDidLoad")
         nameLabel.text = "june"
-        nameLabe1.text = "jun"
+        nameLabe1.text = "park jun"
         button.setTitle("Edit", for: .normal)
         button.setTitle("누르는중", for: .highlighted)
     }
@@ -64,7 +64,17 @@ class MainViewController: UIViewController {
         
         //화면전환버튼
         let nextVC =  AddViewController()
+        nextVC.delegate = self
         self.present(nextVC, animated: true)
     }
     
+}
+
+extension MainViewController: AddViewControllerDelegate {
+    func clickDoneButton(image: UIImage, text1: String, text2: String) {
+        nameLabel.text = text1
+        nameLabe1.text = text2
+        
+        
+    }
 }

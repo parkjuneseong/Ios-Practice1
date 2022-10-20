@@ -11,9 +11,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddViewController" customModule="BlueProject" customModuleProvider="target">
             <connections>
                 <outlet property="AddButton" destination="cqO-mG-6Oh" id="PxQ-NC-4y3"/>
+                <outlet property="CancelButton" destination="glK-Gg-0Da" id="HPh-w5-ped"/>
+                <outlet property="DoneButton" destination="g1l-53-nQ3" id="n8N-Se-iFR"/>
                 <outlet property="field" destination="TRc-lt-JSG" id="ypu-C7-x4t"/>
                 <outlet property="field2" destination="hEk-vy-H5b" id="Wks-7v-PVj"/>
                 <outlet property="imageView" destination="EZT-Go-3S1" id="BzV-tB-hap"/>
+                <outlet property="profile" destination="dTY-I7-H9D" id="rQp-8E-nZE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,7 +30,7 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EZT-Go-3S1">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EZT-Go-3S1">
                     <rect key="frame" x="107" y="484" width="200" height="200"/>
                     <color key="backgroundColor" systemColor="labelColor"/>
                     <constraints>
@@ -55,22 +58,47 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glK-Gg-0Da">
+                    <rect key="frame" x="20" y="54" width="68.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1l-53-nQ3">
+                    <rect key="frame" x="335.5" y="54" width="58.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                    <connections>
+                        <action selector="doneButtonAction:" destination="-1" eventType="touchUpInside" id="Ipb-Cv-ns4"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTY-I7-H9D">
+                    <rect key="frame" x="184.5" y="54" width="45" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hEk-vy-H5b" secondAttribute="bottom" constant="30" id="6et-SF-2Mf"/>
+                <constraint firstItem="glK-Gg-0Da" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="A9D-PH-jRN"/>
                 <constraint firstItem="TRc-lt-JSG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="JKF-3a-ori"/>
                 <constraint firstItem="hEk-vy-H5b" firstAttribute="top" secondItem="TRc-lt-JSG" secondAttribute="bottom" constant="20" id="JfD-S7-iik"/>
                 <constraint firstItem="cqO-mG-6Oh" firstAttribute="trailing" secondItem="EZT-Go-3S1" secondAttribute="trailing" id="LKi-JW-o53"/>
+                <constraint firstItem="g1l-53-nQ3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="MXp-bY-bes"/>
                 <constraint firstItem="cqO-mG-6Oh" firstAttribute="bottom" secondItem="EZT-Go-3S1" secondAttribute="bottom" id="Pjk-Em-IlZ"/>
+                <constraint firstItem="glK-Gg-0Da" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="QGr-JC-Cr2"/>
                 <constraint firstItem="hEk-vy-H5b" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aiS-cc-ll9"/>
+                <constraint firstItem="dTY-I7-H9D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="daG-05-WpS"/>
                 <constraint firstItem="EZT-Go-3S1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eEt-CJ-r9o"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TRc-lt-JSG" secondAttribute="trailing" constant="20" id="gsf-uY-I7p"/>
                 <constraint firstItem="EZT-Go-3S1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="h5Y-fi-EWN"/>
                 <constraint firstItem="TRc-lt-JSG" firstAttribute="top" secondItem="EZT-Go-3S1" secondAttribute="bottom" constant="60" id="mIC-wJ-NCo"/>
+                <constraint firstItem="g1l-53-nQ3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-20" id="sPc-FB-E46"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hEk-vy-H5b" secondAttribute="trailing" constant="20" id="tOO-pG-yfl"/>
                 <constraint firstItem="TRc-lt-JSG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uIK-wH-fT1"/>
+                <constraint firstItem="dTY-I7-H9D" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="wBf-nX-K3B"/>
                 <constraint firstItem="hEk-vy-H5b" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zdd-Ob-CqS"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="73.660714285714278"/>
