@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = MainViewController() // 앱이 실행되면 가장먼저 커지는 vc
+        window?.rootViewController = TabBarController() // 앱이 실행되면 가장먼저 커지는 vc
         window?.makeKeyAndVisible()
         
         return true
