@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="BlueProject" customModuleProvider="target">
             <connections>
+                <outlet property="MainImage" destination="ffC-ow-Qbn" id="Z5w-lu-BRx"/>
                 <outlet property="button" destination="blW-E4-DAT" id="3lM-yl-LdE"/>
                 <outlet property="nameLabe1" destination="Iox-B6-QVH" id="E30-kz-vZV"/>
                 <outlet property="nameLabel" destination="GVC-8B-XZA" id="Qfu-qb-058"/>
@@ -41,13 +42,23 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ffC-ow-Qbn">
+                    <rect key="frame" x="139" y="388" width="150" height="150"/>
+                    <color key="backgroundColor" systemColor="labelColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="UGm-bG-hwE"/>
+                        <constraint firstAttribute="width" constant="150" id="crf-qL-JKi"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="blW-E4-DAT" firstAttribute="top" secondItem="Iox-B6-QVH" secondAttribute="bottom" constant="100" id="6Ev-Ng-Ot8"/>
                 <constraint firstItem="Iox-B6-QVH" firstAttribute="top" secondItem="GVC-8B-XZA" secondAttribute="bottom" constant="40" id="Fv3-Qq-qzD"/>
+                <constraint firstItem="GVC-8B-XZA" firstAttribute="top" secondItem="ffC-ow-Qbn" secondAttribute="bottom" constant="42" id="IxV-3E-gc9"/>
                 <constraint firstItem="Iox-B6-QVH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MsB-xO-F1K"/>
+                <constraint firstItem="ffC-ow-Qbn" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YFQ-wD-jLj"/>
                 <constraint firstItem="blW-E4-DAT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="e2B-HA-QVd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="blW-E4-DAT" secondAttribute="bottom" constant="100" id="n5i-HZ-eT5"/>
                 <constraint firstItem="GVC-8B-XZA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sc7-ay-keG"/>
@@ -56,6 +67,9 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

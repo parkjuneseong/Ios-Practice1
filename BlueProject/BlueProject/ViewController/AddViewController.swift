@@ -21,12 +21,12 @@ class AddViewController: UIViewController {
     @IBOutlet var field: UITextField!
     @IBOutlet var imageView: UIImageView!
     let picker = UIImagePickerController()
-    
     weak var delegate: AddViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        imageView.layer.cornerRadius = 8.0
+        imageView.clipsToBounds = true
         picker.delegate = self
         
 //        DoneButton.text = "Done"
@@ -75,7 +75,10 @@ class AddViewController: UIViewController {
         alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
     }
-    
+    @IBAction func cancelButtonAction(_ sender: Any) {
+        dismiss(animated: true)
+        
+    }
     
     @IBAction func doneButtonAction(_ sender: Any) {
         delegate?.clickDoneButton(image: imageView.image ?? UIImage(), text1: field.text ?? "", text2: field2.text ?? "")
@@ -91,4 +94,5 @@ extension AddViewController : UIImagePickerControllerDelegate,UINavigationContro
         }
         dismiss(animated: true, completion: nil)
     }
+
 }

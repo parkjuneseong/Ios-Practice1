@@ -31,6 +31,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet var nameLabe1: UILabel!
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var MainImage: UIImageView!
     
     init(){
         super.init(nibName: nil, bundle: nil)
@@ -46,10 +47,13 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .white
+        MainImage.layer.cornerRadius = 8.0
+        MainImage.clipsToBounds = true
         
         print("viewDidLoad")
         nameLabel.text = "june"
         nameLabe1.text = "park jun"
+        MainImage.image = UIImage()
         button.setTitle("Edit", for: .normal)
         button.setTitle("누르는중", for: .highlighted)
     }
@@ -74,7 +78,7 @@ extension MainViewController: AddViewControllerDelegate {
     func clickDoneButton(image: UIImage, text1: String, text2: String) {
         nameLabel.text = text1
         nameLabe1.text = text2
-        
+        MainImage.image = image
         
     }
 }
