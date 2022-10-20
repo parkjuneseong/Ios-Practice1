@@ -15,6 +15,6 @@ class TabBarController: UITabBarController {
         let vc2  = LoginViewController()
         self.setViewControllers([vc1,vc2], animated: false)
          
-        // 언ㅁ어나어나어아너아ㅣㄴㅁ어ㅏ닐
+       
     }
 }
