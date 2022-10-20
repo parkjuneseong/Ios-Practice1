@@ -1,0 +1,65 @@
+//
+//  MainViewController.swift
+//  BlueProject
+//
+//  Created by June on 2022/10/18.
+
+// MainStoryBoard 제거
+// SceneDelegate 제거
+// https://phillip5094.tistory.com/m/2
+// Info에서 Application Scene Manifest 제거
+// 프로젝트에서 Main Interface 빈값으로
+/* Project 에서 파일 Viewcontroler 생성
+ import UIKit
+ 
+ @main
+ class AppDelegate: UIResponder, UIApplicationDelegate {
+ 
+ var window: UIWindow?
+ 
+ func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+ window = UIWindow(frame: UIScreen.main.bounds)
+ window?.rootViewController = MainViewController() // 특정 ViewController
+ window?.makeKeyAndVisible()
+ 
+ return true. -> app delegate에 이거 복사
+ 오토레이 아웃 강의 보기 */
+import UIKit
+
+class MainViewController: UIViewController {
+    @IBOutlet weak var button: UIButton!
+
+    @IBOutlet var nameLabe1: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    
+    init(){
+        super.init(nibName: nil, bundle: nil)
+        self.tabBarItem = UITabBarItem(tabBarSystemItem: .downloads, tag: 1)
+        print("init")
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    //해당 Viewcontroller가 켜지면 처음실행되는 함수 (ovwrride)
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = .white
+        
+        print("viewDidLoad")
+        nameLabel.text = "june"
+        nameLabe1.text = "jun"
+        button.setTitle("Edit", for: .normal)
+        button.setTitle("누르는중", for: .highlighted)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("viewWillAppear")
+    }
+    //버튼을 눌렀을떄 실행되는 액션함수
+    @IBAction func touchButton(_ sender: Any) {
+        button.setTitleColor(.blue, for: .normal)
+    }
+}
