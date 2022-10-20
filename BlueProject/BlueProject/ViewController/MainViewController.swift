@@ -28,7 +28,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
-
+    
     @IBOutlet var nameLabe1: UILabel!
     @IBOutlet var nameLabel: UILabel!
     
@@ -60,6 +60,11 @@ class MainViewController: UIViewController {
     }
     //버튼을 눌렀을떄 실행되는 액션함수
     @IBAction func touchButton(_ sender: Any) {
-        button.setTitleColor(.blue, for: .normal)
+        // 새로운 뷰컨트롤러가 나오게 하는 코드
+        
+        //화면전환버튼
+        let nextVC =  AddViewController()
+        self.present(nextVC, animated: true)
     }
+    
 }

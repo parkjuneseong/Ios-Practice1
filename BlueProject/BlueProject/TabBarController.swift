@@ -14,7 +14,6 @@ class TabBarController: UITabBarController {
         let vc1 = MainViewController()
         let vc2  = LoginViewController()
         self.setViewControllers([vc1,vc2], animated: false)
-         
-       
+        
     }
 }

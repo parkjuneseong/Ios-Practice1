@@ -15,6 +15,8 @@
 		8C27ADE428FE96C100922ECA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C27ADE328FE96C100922ECA /* TabBarController.swift */; };
 		8C27ADE828FE995200922ECA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C27ADE628FE995200922ECA /* LoginViewController.swift */; };
 		8C27ADE928FE995200922ECA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C27ADE728FE995200922ECA /* LoginViewController.xib */; };
+		8C29299B29011D5900CAE99D /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29299929011D5800CAE99D /* AddViewController.swift */; };
+		8C29299C29011D5900CAE99D /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C29299A29011D5800CAE99D /* AddViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		8C27ADE328FE96C100922ECA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		8C27ADE628FE995200922ECA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8C27ADE728FE995200922ECA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		8C29299929011D5800CAE99D /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		8C29299A29011D5800CAE99D /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,8 @@
 				8C27ADE528FE992300922ECA /* Login */,
 				8C27ADDF28FE8EDB00922ECA /* MainViewController.swift */,
 				8C27ADE028FE8EDB00922ECA /* MainViewController.xib */,
+				8C29299929011D5800CAE99D /* AddViewController.swift */,
+				8C29299A29011D5800CAE99D /* AddViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -149,6 +155,7 @@
 			files = (
 				8C27ADE928FE995200922ECA /* LoginViewController.xib in Resources */,
 				8C27ADD728FE8E0600922ECA /* LaunchScreen.storyboard in Resources */,
+				8C29299C29011D5900CAE99D /* AddViewController.xib in Resources */,
 				8C27ADE228FE8EDB00922ECA /* MainViewController.xib in Resources */,
 				8C27ADD428FE8E0600922ECA /* Assets.xcassets in Resources */,
 			);
@@ -161,6 +168,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C29299B29011D5900CAE99D /* AddViewController.swift in Sources */,
 				8C27ADE828FE995200922ECA /* LoginViewController.swift in Sources */,
 				8C27ADE428FE96C100922ECA /* TabBarController.swift in Sources */,
 				8C27ADE128FE8EDB00922ECA /* MainViewController.swift in Sources */,
