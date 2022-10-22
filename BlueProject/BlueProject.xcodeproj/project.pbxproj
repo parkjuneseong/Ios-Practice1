@@ -17,6 +17,7 @@
 		8C27ADE928FE995200922ECA /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C27ADE728FE995200922ECA /* LoginViewController.xib */; };
 		8C29299B29011D5900CAE99D /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29299929011D5800CAE99D /* AddViewController.swift */; };
 		8C29299C29011D5900CAE99D /* AddViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C29299A29011D5800CAE99D /* AddViewController.xib */; };
+		8C2929A0290152DB00CAE99D /* AddViewController+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29299F290152DB00CAE99D /* AddViewController+ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8C27ADE728FE995200922ECA /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		8C29299929011D5800CAE99D /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		8C29299A29011D5800CAE99D /* AddViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddViewController.xib; sourceTree = "<group>"; };
+		8C29299F290152DB00CAE99D /* AddViewController+ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddViewController+ImagePicker.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +79,9 @@
 		8C27ADDE28FE8E9300922ECA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8C29299E2901529B00CAE99D /* Add */,
+				8C29299D2901529400CAE99D /* Main */,
 				8C27ADE528FE992300922ECA /* Login */,
-				8C27ADDF28FE8EDB00922ECA /* MainViewController.swift */,
-				8C27ADE028FE8EDB00922ECA /* MainViewController.xib */,
-				8C29299929011D5800CAE99D /* AddViewController.swift */,
-				8C29299A29011D5800CAE99D /* AddViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -93,6 +93,25 @@
 				8C27ADE728FE995200922ECA /* LoginViewController.xib */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		8C29299D2901529400CAE99D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8C27ADDF28FE8EDB00922ECA /* MainViewController.swift */,
+				8C27ADE028FE8EDB00922ECA /* MainViewController.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8C29299E2901529B00CAE99D /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				8C29299929011D5800CAE99D /* AddViewController.swift */,
+				8C29299A29011D5800CAE99D /* AddViewController.xib */,
+				8C29299F290152DB00CAE99D /* AddViewController+ImagePicker.swift */,
+			);
+			path = Add;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2929A0290152DB00CAE99D /* AddViewController+ImagePicker.swift in Sources */,
 				8C29299B29011D5900CAE99D /* AddViewController.swift in Sources */,
 				8C27ADE828FE995200922ECA /* LoginViewController.swift in Sources */,
 				8C27ADE428FE96C100922ECA /* TabBarController.swift in Sources */,

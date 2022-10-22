@@ -31,6 +31,7 @@ class AddViewController: UIViewController {
         
 //        DoneButton.text = "Done"
 //        CancelButton.text = "Cancel"
+        //text field 설정
         profile.text = "프로필"
         field.returnKeyType = .done
         field.borderStyle = .bezel
@@ -86,13 +87,3 @@ class AddViewController: UIViewController {
     }
 }
 
-
-extension AddViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            imageView.image = image
-        }
-        dismiss(animated: true, completion: nil)
-    }
-
-}
